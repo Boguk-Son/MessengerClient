@@ -45,7 +45,8 @@ jobs:
         # The key alias
         alias: ${{ secrets.ALIAS }}
         # The password to the keystore
-        keyStorePassword: ${{ secrets.KEY_STORE_PASS }}
+        keyStorePassword: clamos11#$
+        #keyStorePassword: ${{ secrets.KEY_STORE_PASS }}
         # The password for the key
         keyPassword: ${{ secrets.KEY_PASS }}  
       
