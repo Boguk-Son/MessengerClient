@@ -39,13 +39,12 @@ jobs:
         releaseDirectory: app/build/outputs/apk/release
         signingKeyBase64: ${{ secrets.SIGNING_KEY }}
         alias: ${{ secrets.ALIAS }}
-        #keyStorePassword: clamos11#$
         keyStorePassword: ${{ secrets.KEY_STORE_PASS }}
         keyPassword: ${{ secrets.KEY_PASS }}  
       
-    #- name: Upload APK
-    #  uses: actions/upload-artifact@v1
-    #  with:
-    #    name: app.apk
-    #    path: app/build/outputs/apk/debug
+    - name: Upload APK
+      uses: actions/upload-artifact@v1
+      with:
+        name: Messenger_signed.apk
+        path: app/build/outputs/apk/release
      
