@@ -29,7 +29,7 @@ jobs:
       uses: jonfazzaro/sign-android-release@v1.0.1
       with:
         # The directory to find your release to sign
-        releaseDirectory: app/build/outputs/apk/release
+        releaseDirectory: app/build/outputs/apk/release/Messenger.apk
         # The key used to sign your release in base64 encoded format
         signingKeyBase64: ${{secrets.SIGNING_KEY}}
         # The key alias
