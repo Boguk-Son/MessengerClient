@@ -34,20 +34,13 @@ jobs:
       run : ./gradlew bundleRelease
       
     - name: Sign Android Releases
-    # You may pin to the exact commit or the version.
-    # uses: jonfazzaro/sign-android-release@aff7002d926880ee0f362787cc9be15fc5a1c462
       uses: jonfazzaro/sign-android-release@v1.0.1
       with:
-        # The directory to find your release to sign
         releaseDirectory: app/build/outputs/apk/release
-        # The key used to sign your release in base64 encoded format
         signingKeyBase64: ${{ secrets.SIGNING_KEY }}
-        # The key alias
         alias: ${{ secrets.ALIAS }}
-        # The password to the keystore
-        keyStorePassword: clamos11#$
-        #keyStorePassword: ${{ secrets.KEY_STORE_PASS }}
-        # The password for the key
+        #keyStorePassword: clamos11#$
+        keyStorePassword: ${{ secrets.KEY_STORE_PASS }}
         keyPassword: ${{ secrets.KEY_PASS }}  
       
     #- name: Upload APK
