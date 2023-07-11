@@ -45,6 +45,6 @@ jobs:
     - name: Upload APK
       uses: actions/upload-artifact@v1
       with:
-        name: Messenger_signed.apk
-        path: app/build/outputs/apk/release
+        name: apk
+        path: app/build/outputs/apk/release/Messenger_signed.apk
      
