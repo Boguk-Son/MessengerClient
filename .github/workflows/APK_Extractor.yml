@@ -19,10 +19,7 @@ jobs:
         java-version: '18'
         distribution: 'temurin'
         cache: gradle
-
-    # - name: Build debug APK
-    #   run: bash ./gradlew assembleDebug --stacktrace
-    
+ 
     - name : Grant execute permission for gradlew
       run : chmod +x gradlew
     
@@ -36,7 +33,7 @@ jobs:
     - name: Sign Android Releases
       uses: jonfazzaro/sign-android-release@v1.0.1
       with:
-        releaseDirectory: app/build/outputs/apk/release
+        releaseDirectory: app/build/outputs/apk/release/Messenger_signed.apk
         signingKeyBase64: ${{ secrets.SIGNING_KEY }}
         alias: ${{ secrets.ALIAS }}
         keyStorePassword: ${{ secrets.KEY_STORE_PASS }}
