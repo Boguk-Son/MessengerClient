@@ -20,8 +20,8 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: Build debug APK
-      run: bash ./gradlew assembleDebug --stacktrace
+    # - name: Build debug APK
+    #   run: bash ./gradlew assembleDebug --stacktrace
       
     - name: Sign Android Releases
     # You may pin to the exact commit or the version.
@@ -39,9 +39,9 @@ jobs:
         # The password for the key
         keyPassword: ${{secrets.KEY_PASS}}  
       
-    - name: Upload APK
-      uses: actions/upload-artifact@v1
-      with:
-        name: app.apk
-        path: app/build/outputs/apk/debug
+    #- name: Upload APK
+    #  uses: actions/upload-artifact@v1
+    #  with:
+    #    name: app.apk
+    #    path: app/build/outputs/apk/debug
      
